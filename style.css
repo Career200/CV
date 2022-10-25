@@ -448,7 +448,7 @@ dialog {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -20px;
+  bottom: -30px;
   height: 20px;
   width: var(--progress);
   border-radius: 10px;
@@ -478,6 +478,10 @@ dialog {
 .modal#skills .name.adresp:before {
   --progress: 78vw;
   background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000, #4b8900);
+}
+.modal#skills .name.git:before {
+  --progress: 60vw;
+  background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000);
 }
 .modal#skills .name.figma:before {
   --progress: 47vw;
