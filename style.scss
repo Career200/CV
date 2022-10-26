@@ -30,9 +30,6 @@ a{
         text-shadow: 3px 3px 2px rgb(255, 0, 162), 10px 0px 3em blue, -10px 0 3em blue;
     }
 }
-dialog{
-    border: none;
-}
 ::-webkit-scrollbar{
     background-color: transparent;
     height: 15px;
@@ -48,8 +45,8 @@ dialog{
 
 #cursor {
     position: absolute;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     border: 5px dotted #f3a7ff;
     animation: idle 3s linear 1ms infinite alternate;
@@ -92,6 +89,7 @@ dialog{
 
 //end cursor styling
 .general-container{
+    position: relative;
     min-height: 99vh;
     width: 100%;
     padding-top: 3vh;
@@ -296,8 +294,8 @@ dialog{
 
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    bottom: 0;
 
     z-index: 998;
     &#education{
