@@ -457,11 +457,11 @@ a:hover {
   }
 }
 .modal#skills .name.ehtml:before {
-  --progress: 92vw;
+  --progress: 85vw;
   background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000, #4b8900, #039215);
 }
 .modal#skills .name.css:before {
-  --progress: 82vw;
+  --progress: 80vw;
   background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000, #4b8900);
 }
 .modal#skills .name.js:before {
@@ -477,11 +477,11 @@ a:hover {
   background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000, #4b8900);
 }
 .modal#skills .name.git:before {
-  --progress: 60vw;
+  --progress: 55vw;
   background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000);
 }
 .modal#skills .name.figma:before {
-  --progress: 47vw;
+  --progress: 42vw;
   background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00);
 }
 .modal#contact {

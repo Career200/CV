@@ -412,12 +412,12 @@ a{
             }
         }
         &.ehtml:before{
-            --progress: 92vw;
+            --progress: 85vw;
             background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000, #4b8900, #039215);
 
         }
         &.css:before{
-            --progress: 82vw;
+            --progress: 80vw;
             background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000, #4b8900);
 
         }
@@ -437,12 +437,12 @@ a{
 
         }
         &.git:before{
-            --progress: 60vw;
+            --progress: 55vw;
             background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00, #7c7600, #688000);
 
         }
         &.figma:before{
-            --progress: 47vw;
+            --progress: 42vw;
             background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300, #8a6c00);
 
         }
