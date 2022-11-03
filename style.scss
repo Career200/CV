@@ -87,7 +87,8 @@ a{
     }
 }
 
-//end cursor styling
+// HTML flow
+
 .general-container{
     position: relative;
     min-height: 99vh;
@@ -107,8 +108,26 @@ a{
     gap: 20px;
 }
 
+@keyframes noise-anim{
+    $steps:20;
+    @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+        clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }
+}
+@keyframes noise-anim-2{
+    $steps:20;
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+        clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }
+}
+
 .hero {
     width: clamp(500px, 75vw, 1200px);
+
     @media (max-width: 969px) {
         width: 100%;
         flex-direction: row;
@@ -140,6 +159,31 @@ a{
     font-size: 3rem;
     margin-bottom: 15px;
     text-shadow: 1px 1px 3px #22009d;
+    position: relative;
+    &:after{
+        content:attr(data-text);
+        position:absolute;
+        width: 100%;
+        left: 3px;
+        text-shadow:-1px 0 rgb(162, 0, 157);
+        top:4px;
+        background:transparent;
+        overflow:hidden;
+        clip:rect(0,900px,0,0);
+        animation:noise-anim 2s infinite linear alternate-reverse;
+    }
+    &:before{
+        content:attr(data-text);
+        position:absolute;
+        width: 100%;
+        left: 5px;
+        text-shadow: 1px 0 rgb(61, 61, 188);
+        top:4px;
+        background:transparent;
+        overflow:hidden;
+        clip:rect(0,900px,0,0);
+        animation:noise-anim-2 3s infinite linear alternate-reverse;
+    }
     }
 }
 .about {
