@@ -1,6 +1,5 @@
 //TODO
 // make cursor styles into classes and switch between them with JS
-// uncheck checkbox and hide seemore on click anywhere but seemore(?)
 
 // Custom cursor
 var cursor = document.getElementById('cursor');
@@ -12,7 +11,7 @@ document.addEventListener('mousemove', function(e){
 });
 
 //Drag to scroll img
-const slider = document.querySelector(".image-container");
+const slider = document.querySelector('.image-container');
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -38,3 +37,14 @@ slider.addEventListener("mousemove", e => {
     const walk = x - startX;
     slider.scrollLeft = scrollLeft - walk;
 });
+
+// Click anywhere to close .seemore
+const clickTarget = document.getElementById('label')
+const checkbox = document.getElementById('lifestory')
+const seemorebox = document.querySelector('.seemore')
+
+document.addEventListener("click", (e) => {
+    if (checkbox.checked && e.target.contains(seemorebox || clickTarget)) {
+        checkbox.checked = false;
+    }
+})

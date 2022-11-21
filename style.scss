@@ -1,6 +1,5 @@
 //TODO
 //make marquee endless
-//There are two types of modal windows: with links+:target and with checkbox. Maybe choose one?
 
 * {
     box-sizing: border-box;
@@ -398,6 +397,11 @@ a{
     &#experience{
         background: url(assets/img/c-board.svg);
 
+        a {
+            position: relative;
+            top: 2px;
+        }
+
         &:target{display: block;}
         .vertical-wrapper {
             @media (max-width: 500px) {
@@ -519,6 +523,7 @@ a{
         }
 
         h3 {
+            width: fit-content;
             z-index: 999;
             animation: wander 40s ease-in 1ms infinite alternate;
             --where: 50vw, 0;
@@ -558,6 +563,7 @@ a{
         text-shadow: 4px 4px 10px rgba(255, 0, 0, 0.738), -4px -4px 10px rgba(255, 0, 0, 0.738), -4px 4px 10px rgba(255, 0, 0, 0.738), 4px -4px 10px rgba(255, 0, 0, 0.738);
     }
 }
+
 //see more functionality
 
 .personal {
@@ -614,7 +620,7 @@ a{
 }
 .more-state:checked ~ .more-label::before {
     font-size: 1.4rem;
-    content: 'Click here to hide';
+    content: 'Click anywhere to hide';
 }
 .personal:has(.more-state:checked){
     position: absolute;
@@ -627,7 +633,6 @@ a{
     }
 }
 .more-state:checked ~ .seemore {
-
     opacity: 1;
     font-size: inherit;
     max-height: fit-content;
@@ -635,6 +640,6 @@ a{
     border: 3px solid #5400b1;
     box-shadow: 0px -4px 5px #ca09e9;
     border-radius: 5px;
-
 }
+
 //end see more functionality
