@@ -29,12 +29,13 @@ a{
         text-shadow: 3px 3px 2px rgb(255, 0, 162), 10px 0px 3em blue, -10px 0 3em blue;
     }
 }
-::-webkit-scrollbar{
+*::-webkit-scrollbar{
     background-color: transparent;
-    height: 15px;
+    height: 12px;
+    width: 12px;
 
 }
-::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb{
     background-image: radial-gradient(circle, #0f2b4f, #1a3a7a, #3e44a3, #6f4ac7, #a945e5, #b43ae7, #bf2ae8, #ca09e9, #a303d7, #7c00c5, #5400b1, #22009d);
     border-radius: 15px;
     border: 1px solid #116aae;
