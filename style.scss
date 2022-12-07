@@ -429,6 +429,7 @@ a{
         display: grid;
         grid-template-columns: 1fr 3fr;
         align-content: space-evenly;
+        align-items: end;
         @media (max-width: 768px), (max-height: 910px) {
             display: flex;
             h2 {
