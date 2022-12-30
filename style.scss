@@ -13,9 +13,7 @@
 body {
     min-height: 99vh;
     font-family: 'Michroma', sans-serif;
-
-    background:
-    linear-gradient(rgb(11, 10, 10), rgb(35, 27, 27));
+    background: linear-gradient(rgb(11, 10, 10), rgb(35, 27, 27));
     background-size: 100%;
 }
 a{
@@ -476,12 +474,16 @@ a{
 
         }
         &.js:before{
-            --progress: 23vw;
+            --progress: 25vw;
             background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200, #974e00, #935900, #8f6300);
 
         }
+        &.jsx-ts-tsx::before{
+            --progress: 18vw;
+            background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200);
+        }
         &.jsf:before{
-            --progress: 10vw;
+            --progress: 14vw;
             background-image: linear-gradient(to right, #8e0c00, #912400, #933400, #954200);
 
         }
