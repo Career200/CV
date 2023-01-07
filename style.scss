@@ -408,15 +408,6 @@ a{
                 overflow: hidden;
             }
         }
-        img {
-            margin-top: 15px;
-            @media (max-width: 768px) {
-                width: 80vw;
-                min-width: 450px;
-                height: auto;
-                overflow: hidden;
-            }
-        }
     }
     &#skills{
     background: url(assets/img/tile.svg);
