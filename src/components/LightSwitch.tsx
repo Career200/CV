@@ -9,6 +9,11 @@ export const DarkModeSwitch: React.FC = () => {
 	);
 
 	useEffect(() => {
+		// Set initial dark mode state on mount
+		document.documentElement.classList.toggle('dark-mode', darkModeOn);
+	}, []);
+
+	useEffect(() => {
 		localStorage.setItem('darkModeOn', JSON.stringify(darkModeOn));
 	}, [darkModeOn]);
 

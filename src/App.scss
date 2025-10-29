@@ -2,13 +2,14 @@ a {
 	position: relative;
 	font-family: 'Press Start 2P';
 	text-decoration: unset;
+	color: var(--text-primary);
 }
 a ::after {
 	content: '';
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-	background-color: #646cff;
+	background-color: var(--accent-color);
 }
 
 .top-banner {
@@ -16,9 +17,10 @@ a ::after {
 	top: 0;
 	right: 0;
 	padding: 8px;
-	background: rgba(0, 0, 0, 0.7);
+	background: var(--banner-bg);
 	border-radius: 0 0 0 8px;
-	border: 2px solid white;
+	border: 2px solid var(--banner-border);
+	color: var(--text-primary);
 }
 
 aside {
@@ -34,23 +36,10 @@ aside {
 		left: 0px;
 		width: 200px;
 		height: 100vh;
-		background: linear-gradient(
-				to top,
-				rgba(24, 28, 111, 0.9215686275),
-				rgba(50, 25, 109, 0.8941176471),
-				rgba(67, 22, 107, 0.8941176471),
-				rgba(81, 19, 104, 0.8470588235),
-				rgba(93, 15, 100, 0.8941176471),
-				rgba(102, 7, 89, 0.9176470588),
-				rgba(109, 1, 80, 0.8941176471),
-				rgba(113, 0, 72, 0.8941176471),
-				rgba(113, 0, 55, 0.8745098039),
-				rgba(110, 0, 38, 0.8941176471),
-				rgba(104, 0, 23, 0.8941176471),
-				rgba(96, 2, 2, 0.8941176471)
-			),
+		background: var(--nav-gradient),
 			url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 		font-family: 'Press Start 2P';
+		color: var(--text-primary);
 	}
 	&.projects {
 		right: 0px;
