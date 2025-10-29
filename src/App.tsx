@@ -19,7 +19,9 @@ function App() {
 						top: 0,
 						right: 0,
 						padding: '8px',
-						background: 'rgba(0, 0, 0, 0.7)'
+						background: 'rgba(0, 0, 0, 0.7)',
+						borderRadius: '0 0 0 8px',
+						border: '2px solid white'
 					}}
 				>
 					<p>Welcome to my portfolio!</p>
