@@ -2,7 +2,7 @@ import './App.scss';
 
 import { Fadeout } from './components/Fadeout';
 import { DarkModeSwitch } from './components/LightSwitch';
-import Timeline from './components/timeline/Timeline';
+import { Timeline } from './components/timeline/Timeline';
 import Reel from './components/Reel';
 import Hero from './components/Hero';
 
@@ -28,7 +28,9 @@ function App() {
 				</div>
 			</Fadeout>
 			<aside className="nav">
-				<DarkModeSwitch />
+				<div className="quick-actions">
+					<DarkModeSwitch />
+				</div>
 				<Timeline>
 					<p>Hello, world!</p>
 					<p>Who am I?</p>

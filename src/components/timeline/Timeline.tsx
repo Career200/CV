@@ -1,16 +1,17 @@
 import './Timeline.scss';
 
-export default function Timeline({ children }: any) {
+export const Timeline = ({ children }: any) => {
 	return (
-		<div className="objects">
+		<div className="timeline">
+			{children}
 			<input
 				type="range"
+				defaultValue={0}
 				min="1"
 				max={children.length * 10}
 				className="slider"
 				id="myRange"
 			/>
-			{children}
 		</div>
 	);
-}
+};
