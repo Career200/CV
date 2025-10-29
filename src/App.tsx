@@ -5,10 +5,82 @@ import { DarkModeSwitch } from './components/LightSwitch';
 import { Timeline } from './components/timeline/Timeline';
 import Reel from './components/Reel';
 import Hero from './components/Hero';
+import { useRef, useEffect } from 'react';
 
 import myImg from './assets/me.jfif';
 
 function App() {
+	const navRef = useRef<HTMLElement>(null);
+
+	useEffect(() => {
+		const nav = navRef.current;
+		if (!nav) return;
+
+		let expandTimeout: number | undefined;
+		let touchStartX = 0;
+
+		const handleTouchStart = (e: TouchEvent) => {
+			touchStartX = e.touches[0].clientX;
+
+			// Clear any pending collapse timeout
+			if (expandTimeout) {
+				clearTimeout(expandTimeout);
+				expandTimeout = undefined;
+			}
+
+			// Expand if touch starts in the collapsed area (first 40px for easier interaction)
+			if (touchStartX <= 40) {
+				nav.classList.add('expanded');
+			}
+		};
+
+		const handleTouchEnd = (e: TouchEvent) => {
+			// Delay collapse to allow interaction with expanded content
+			expandTimeout = window.setTimeout(() => {
+				nav.classList.remove('expanded');
+			}, 2000); // 2 second delay before auto-collapse
+		};
+
+		const handleTouchMove = (e: TouchEvent) => {
+			const touch = e.touches[0];
+
+			// If user swipes significantly to the right (away from navbar), collapse immediately
+			if (touch.clientX > 220) {
+				if (expandTimeout) {
+					clearTimeout(expandTimeout);
+				}
+				nav.classList.remove('expanded');
+			}
+		};
+
+		// Also collapse when touching outside the navbar
+		const handleDocumentTouch = (e: TouchEvent) => {
+			const touch = e.touches[0];
+			if (touch.clientX > 200 && nav.classList.contains('expanded')) {
+				nav.classList.remove('expanded');
+				if (expandTimeout) {
+					clearTimeout(expandTimeout);
+					expandTimeout = undefined;
+				}
+			}
+		};
+
+		nav.addEventListener('touchstart', handleTouchStart, { passive: true });
+		nav.addEventListener('touchend', handleTouchEnd, { passive: true });
+		nav.addEventListener('touchmove', handleTouchMove, { passive: true });
+		document.addEventListener('touchstart', handleDocumentTouch, { passive: true });
+
+		return () => {
+			nav.removeEventListener('touchstart', handleTouchStart);
+			nav.removeEventListener('touchend', handleTouchEnd);
+			nav.removeEventListener('touchmove', handleTouchMove);
+			document.removeEventListener('touchstart', handleDocumentTouch);
+			if (expandTimeout) {
+				clearTimeout(expandTimeout);
+			}
+		};
+	}, []);
+
 	return (
 		<>
 			<Fadeout>
@@ -16,7 +88,7 @@ function App() {
 					<p>Welcome to my portfolio!</p>
 				</div>
 			</Fadeout>
-			<aside className="nav">
+			<aside className="nav" ref={navRef}>
 				<div className="quick-actions">
 					<DarkModeSwitch />
 				</div>
