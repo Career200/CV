@@ -1,4 +1,5 @@
 import { PropsWithChildren, useState } from 'react';
+import './Fadeout.scss';
 
 type Props = PropsWithChildren<{
 	timeout?: number;
@@ -26,21 +27,13 @@ export const Fadeout = ({
 
 	return (
 		<div
+			className="fadeout-container"
 			style={{
-				animationName: 'fadeout',
-				animationTimingFunction: 'ease-in',
-				animationFillMode: 'forwards',
 				animationDelay: `${timeout}ms`,
 				animationDuration: `${duration}ms`
 			}}
 		>
 			{children}
-			<style>{`
-				@keyframes fadeout {
-					from { opacity: 1; }
-					to { opacity: 0; }
-				}
-			`}</style>
 		</div>
 	);
 };

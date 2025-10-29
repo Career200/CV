@@ -1,0 +1,17 @@
+.dark-mode-switch {
+	svg {
+		cursor: pointer;
+
+		path {
+			&.moon {
+				fill: white;
+				filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+			}
+
+			&.sun {
+				fill: black;
+				filter: drop-shadow(3px 5px 2px rgb(255 255 255 / 0.4));
+			}
+		}
+	}
+}
