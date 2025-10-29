@@ -1,22 +1,30 @@
-import { useState } from 'react'
-import './App.scss'
+import './App.scss';
 
-import Fadeout from './components/Fadeout'
-import LightSwitch from './components/LightSwitch'
-import Timeline from './components/Timeline'
-import Reel from './components/Reel'
-import Hero from './components/Hero'
+import { Fadeout } from './components/Fadeout';
+import LightSwitch from './components/LightSwitch';
+import Timeline from './components/Timeline';
+import Reel from './components/Reel';
+import Hero from './components/Hero';
 
-import myImg from './assets/me.jfif'
+import myImg from './assets/me.jfif';
 
 function App() {
 	return (
 		<>
-			<Fadeout
-			/* 				title="Hello there"
-				sub="This is my CV. Please, take a look"
-				fullscreen */
-			/>
+			<Fadeout>
+				<div
+					className="top-banner"
+					style={{
+						position: 'fixed',
+						top: 0,
+						right: 0,
+						padding: '8px',
+						background: 'rgba(0, 0, 0, 0.7)'
+					}}
+				>
+					<p>Welcome to my portfolio!</p>
+				</div>
+			</Fadeout>
 			<div className="light">
 				<LightSwitch />
 			</div>
@@ -639,7 +647,7 @@ function App() {
 				</Reel> */}
 			</aside>
 		</>
-	)
+	);
 }
 
-export default App
+export default App;
