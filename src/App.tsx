@@ -1,8 +1,8 @@
 import './App.scss';
 
 import { Fadeout } from './components/Fadeout';
-import LightSwitch from './components/LightSwitch';
-import Timeline from './components/Timeline';
+import { DarkModeSwitch } from './components/LightSwitch';
+import Timeline from './components/timeline/Timeline';
 import Reel from './components/Reel';
 import Hero from './components/Hero';
 
@@ -25,10 +25,8 @@ function App() {
 					<p>Welcome to my portfolio!</p>
 				</div>
 			</Fadeout>
-			<div className="light">
-				<LightSwitch />
-			</div>
 			<aside className="nav">
+				<DarkModeSwitch />
 				<Timeline>
 					<p>Hello, world!</p>
 					<p>Who am I?</p>
