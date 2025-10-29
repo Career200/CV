@@ -11,7 +11,7 @@ export default function Timeline({ children }: any) {
 					min="1"
 					max={children.length * 10}
 					value={value}
-					onChange={(e) => setValue(e.target.value)}
+					onChange={(e) => setValue(Number(e.target.value))}
 					className="slider"
 					id="myRange"
 				/>
