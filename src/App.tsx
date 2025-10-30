@@ -1,6 +1,5 @@
 import './App.scss';
 
-import { Fadeout } from './components/Fadeout';
 import { DarkModeSwitch } from './components/LightSwitch';
 import { Timeline } from './components/timeline/Timeline';
 import { ContentSection } from './components/ContentSection';
@@ -19,11 +18,6 @@ function App() {
 
 	return (
 		<>
-			<Fadeout>
-				<div className="top-banner">
-					<p>Welcome to my portfolio!</p>
-				</div>
-			</Fadeout>
 			<aside className="nav" ref={navRef}>
 				<div className="quick-actions">
 					<DarkModeSwitch />
