@@ -9,7 +9,6 @@
 	line-height: 1.5;
 	font-weight: 400;
 
-	/* Light theme colors (default) */
 	--bg-primary: #ffffff;
 	--bg-secondary: #f5f5f5;
 	--text-primary: rgba(0, 0, 0, 0.87);
@@ -22,7 +21,6 @@
 	--banner-border: #333333;
 	--slider-thumb: #646cff;
 
-	/* Light theme nav gradient */
 	--nav-gradient: linear-gradient(
 		to top,
 		rgba(100, 108, 255, 0.15),
@@ -49,7 +47,6 @@
 	background-color: var(--bg-primary);
 }
 
-/* Dark mode styles */
 :root.dark-mode {
 	--bg-primary: #242424;
 	--bg-secondary: #1a1a1a;
@@ -63,7 +60,6 @@
 	--banner-border: #ffffff;
 	--slider-thumb: #ffffff;
 
-	/* Dark theme nav gradient */
 	--nav-gradient: linear-gradient(
 		to top,
 		rgba(24, 28, 111, 0.92),
@@ -82,10 +78,23 @@
 
 	color-scheme: dark;
 }
+
 body {
 	height: auto;
 	min-height: 100vh;
 }
+
+*,
+body {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+*::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
+}
+
 button {
 	border-radius: 8px;
 	border: 1px solid transparent;

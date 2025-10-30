@@ -1,4 +1,5 @@
-import { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren, useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import './Fadeout.scss';
 
 type Props = PropsWithChildren<{
@@ -6,26 +7,26 @@ type Props = PropsWithChildren<{
 	duration?: number;
 }>;
 
-/**
- * Popup that shows children with a fadeout effect after a set time.
- * unmounts itself after animation ends.
- */
 export const Fadeout = ({
 	timeout = 2000,
 	duration = 500,
 	children
 }: Props) => {
-	const [visible, setVisible] = useState<boolean>(true);
+	const [visible, setVisible] = useState(true);
 
-	setTimeout(() => {
-		setVisible(false);
-	}, timeout + duration);
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setVisible(false);
+		}, timeout + duration);
+
+		return () => clearTimeout(timer);
+	}, [timeout, duration]);
 
 	if (!visible) {
 		return null;
 	}
 
-	return (
+	return createPortal(
 		<div
 			className="fadeout-container"
 			style={{
@@ -34,6 +35,7 @@ export const Fadeout = ({
 			}}
 		>
 			{children}
-		</div>
+		</div>,
+		document.body
 	);
 };
