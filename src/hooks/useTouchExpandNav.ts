@@ -3,7 +3,7 @@ import { useEffect, RefObject } from 'react';
 const TOUCH_ZONE = 40;
 const NAV_EXPANDED_WIDTH = 200;
 const NAV_SWIPE_THRESHOLD = 220;
-const AUTO_COLLAPSE_DELAY = 1400;
+const AUTO_COLLAPSE_DELAY = 1500;
 
 /**
  * Handles touch gestures to expand/collapse navigation on mobile devices.
@@ -45,7 +45,13 @@ export const useTouchExpandNav = (navRef: RefObject<HTMLElement>) => {
 		};
 
 		const handleTouchEnd = () => {
-			expandTimeout = window.setTimeout(collapseNav, AUTO_COLLAPSE_DELAY);
+			if (nav.classList.contains('expanded')) {
+				expandTimeout = window.setTimeout(collapseNav, AUTO_COLLAPSE_DELAY);
+			}
+		};
+
+		const handleTouchCancel = () => {
+			handleTouchEnd();
 		};
 
 		const handleTouchMove = (e: TouchEvent) => {
@@ -70,6 +76,7 @@ export const useTouchExpandNav = (navRef: RefObject<HTMLElement>) => {
 
 		nav.addEventListener('touchstart', handleTouchStart, { passive: true });
 		nav.addEventListener('touchend', handleTouchEnd, { passive: true });
+		nav.addEventListener('touchcancel', handleTouchCancel, { passive: true });
 		nav.addEventListener('touchmove', handleTouchMove, { passive: true });
 		document.addEventListener('touchstart', handleDocumentTouch, {
 			passive: true
@@ -78,6 +85,7 @@ export const useTouchExpandNav = (navRef: RefObject<HTMLElement>) => {
 		return () => {
 			nav.removeEventListener('touchstart', handleTouchStart);
 			nav.removeEventListener('touchend', handleTouchEnd);
+			nav.removeEventListener('touchcancel', handleTouchCancel);
 			nav.removeEventListener('touchmove', handleTouchMove);
 			document.removeEventListener('touchstart', handleDocumentTouch);
 			clearExpandTimeout();
