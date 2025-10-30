@@ -11,6 +11,7 @@ import { useRef } from 'react';
 import contentData from './data/content.json';
 import emailIcon from './assets/contact-icons/email.svg';
 import githubIcon from './assets/contact-icons/github.svg';
+import linkedinIcon from './assets/contact-icons/linkedin.svg';
 import telegramIcon from './assets/contact-icons/telegram-alt.svg';
 
 function App() {
@@ -26,6 +27,11 @@ function App() {
 				<div className="quick-actions">
 					<DarkModeSwitch />
 					<div className="contact-icons">
+						<LinkIcon
+							href="https://www.linkedin.com/in/dzhukov404/"
+							icon={linkedinIcon}
+							alt="LinkedIn"
+						/>
 						<LinkIcon
 							href="https://github.com/Career200"
 							icon={githubIcon}
