@@ -3,7 +3,7 @@ import { useEffect, RefObject } from 'react';
 const TOUCH_ZONE = 40;
 const NAV_EXPANDED_WIDTH = 200;
 const NAV_SWIPE_THRESHOLD = 220;
-const AUTO_COLLAPSE_DELAY = 1000;
+const AUTO_COLLAPSE_DELAY = 1400;
 
 /**
  * Handles touch gestures to expand/collapse navigation on mobile devices.
