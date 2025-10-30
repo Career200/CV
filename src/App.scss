@@ -1,0 +1,87 @@
+a {
+	position: relative;
+	font-family: 'Press Start 2P';
+	text-decoration: none;
+	color: var(--text-primary);
+
+	&::after {
+		content: '';
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		background-color: var(--accent-color);
+	}
+}
+
+.top-banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 8px;
+	background: var(--banner-bg);
+	border-radius: 0 0 8px 0;
+	border: 2px solid var(--banner-border);
+	color: var(--text-primary);
+}
+
+main {
+	margin-right: 20px;
+	transition: margin-right 0.3s ease;
+	background-image: url('./assets/map.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+	:root.dark-mode & {
+		filter: invert(1);
+
+		> * {
+			filter: invert(1);
+		}
+	}
+
+	@media (min-width: 768px) {
+		margin-right: 200px;
+	}
+}
+
+aside {
+	> .quick-actions {
+		padding: 4px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.contact-icons {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+		}
+	}
+	&.nav {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		right: 0px;
+		width: 20px;
+		height: 100vh;
+		background: var(--nav-gradient),
+			url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+		font-family: 'Press Start 2P';
+		color: var(--text-primary);
+		transition: width 0.3s ease;
+		overflow: hidden;
+		z-index: 100;
+
+		&:hover,
+		&:focus-within,
+		&.expanded {
+			width: 200px;
+		}
+
+		@media (min-width: 768px) {
+			width: 200px;
+		}
+	}
+}

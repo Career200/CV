@@ -1,0 +1,24 @@
+.dark-mode-switch {
+	svg {
+		cursor: pointer;
+		transition: transform 0.3s ease;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		path {
+			transition: fill 0.3s ease, filter 0.3s ease;
+
+			&.moon {
+				fill: var(--text-primary);
+				filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+			}
+
+			&.sun {
+				fill: var(--text-primary);
+				filter: drop-shadow(3px 5px 2px rgb(255 255 255 / 0.15));
+			}
+		}
+	}
+}

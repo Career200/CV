@@ -1,0 +1,19 @@
+.link-icon {
+	display: inline-block;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	img {
+		display: block;
+		transition: filter 0.3s ease;
+		filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+
+		:root.dark-mode & {
+			filter: brightness(0) invert(1) drop-shadow(3px 5px 2px rgb(255 255 255 / 0.15));
+		}
+	}
+}

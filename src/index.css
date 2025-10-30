@@ -1,0 +1,116 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	transition: 300ms;
+}
+
+:root {
+	font-family: 'Michroma', Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	--bg-primary: #ffffff;
+	--bg-secondary: #f5f5f5;
+	--text-primary: rgba(0, 0, 0, 0.87);
+	--text-secondary: rgba(0, 0, 0, 0.6);
+	--border-color: #e0e0e0;
+	--accent-color: #646cff;
+	--button-bg: #f0f0f0;
+	--button-hover-border: #646cff;
+	--banner-bg: rgba(255, 255, 255, 0.9);
+	--banner-border: #333333;
+	--slider-thumb: #646cff;
+
+	--nav-gradient: linear-gradient(
+		to top,
+		rgba(100, 108, 255, 0.15),
+		rgba(120, 119, 198, 0.15),
+		rgba(147, 130, 180, 0.15),
+		rgba(167, 140, 165, 0.15),
+		rgba(180, 150, 150, 0.15),
+		rgba(190, 160, 135, 0.15),
+		rgba(195, 170, 120, 0.15),
+		rgba(200, 180, 105, 0.15),
+		rgba(205, 190, 90, 0.15),
+		rgba(210, 200, 75, 0.15),
+		rgba(215, 210, 60, 0.15),
+		rgba(220, 220, 45, 0.15)
+	);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+
+	color-scheme: light;
+	color: var(--text-primary);
+	background-color: var(--bg-primary);
+}
+
+:root.dark-mode {
+	--bg-primary: #242424;
+	--bg-secondary: #1a1a1a;
+	--text-primary: rgba(255, 255, 255, 0.87);
+	--text-secondary: rgba(255, 255, 255, 0.6);
+	--border-color: #404040;
+	--accent-color: #646cff;
+	--button-bg: #1a1a1a;
+	--button-hover-border: #646cff;
+	--banner-bg: rgba(0, 0, 0, 0.9);
+	--banner-border: #ffffff;
+	--slider-thumb: #ffffff;
+
+	--nav-gradient: linear-gradient(
+		to top,
+		rgba(24, 28, 111, 0.92),
+		rgba(50, 25, 109, 0.89),
+		rgba(67, 22, 107, 0.89),
+		rgba(81, 19, 104, 0.85),
+		rgba(93, 15, 100, 0.89),
+		rgba(102, 7, 89, 0.92),
+		rgba(109, 1, 80, 0.89),
+		rgba(113, 0, 72, 0.89),
+		rgba(113, 0, 55, 0.87),
+		rgba(110, 0, 38, 0.89),
+		rgba(104, 0, 23, 0.89),
+		rgba(96, 2, 2, 0.89)
+	);
+
+	color-scheme: dark;
+}
+
+body {
+	height: auto;
+	min-height: 100vh;
+}
+
+*,
+body {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+*::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
+}
+
+button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: var(--button-bg);
+	color: var(--text-primary);
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: var(--button-hover-border);
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
