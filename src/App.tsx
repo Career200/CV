@@ -6,7 +6,7 @@ import { Timeline } from './components/timeline/Timeline';
 import { ContentSection } from './components/ContentSection/ContentSection';
 import { useScrollSpy } from './hooks/useScrollSpy';
 import { useTouchExpandNav } from './hooks/useTouchExpandNav';
-import { useRef } from 'react';
+import { useMemo, useRef } from 'react';
 
 import contentData from './data/content.json';
 import emailIcon from './assets/contact-icons/email.svg';
@@ -16,7 +16,10 @@ import telegramIcon from './assets/contact-icons/telegram-alt.svg';
 
 function App() {
 	const navRef = useRef<HTMLElement>(null);
-	const sectionIds = contentData.sections.map((section) => section.id);
+	const sectionIds = useMemo(
+		() => contentData.sections.map((section) => section.id),
+		[]
+	);
 	const { activeSection, scrollToSection } = useScrollSpy(sectionIds);
 
 	useTouchExpandNav(navRef);
