@@ -89,7 +89,6 @@ $thumb-height: 40px;
   transition: all 0.2s ease;
   color: var(--text-color);
   opacity: 0.6;
-  max-width: 150px;
   pointer-events: auto;
   cursor: pointer;
 
@@ -145,5 +144,5 @@ $thumb-height: 40px;
 
 .timeline-title {
   font-size: 0.9rem;
-  line-height: 1.2;
+  line-height: 1.6;
 }
