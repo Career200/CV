@@ -1,0 +1,6 @@
+{
+	"id": "learning",
+	"order": 4,
+	"title": "...always learning",
+	"content": "Accidentally, though - I just want to build cool stuff and it so happens that I learn along the way. I default to Astro for pet projects — content-driven, but islands let you smuggle a whole SPA inside: a TTRPG site for my players, in-world lore wrapped around a live character sheet. Deep in Mechwarrior obsession at some point, I pulled mech stats from MW5 source code and built a site around it. I've animated my own feelings to explain them in therapy. Somehow the tricks I learn in my personal projects keep resurfacing in my day job."
+}

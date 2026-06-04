@@ -1,0 +1,6 @@
+{
+	"id": "skills",
+	"order": 3,
+	"title": "...with my skills",
+	"content": "I work primarily in React, TypeScript, and modern styling (CSS-in-JS, CSS/SASS or Tailwind). Comfortable with state management (MobX), testing frameworks (Jest, Puppeteer), and build tooling. I've built component libraries, implemented visual regression testing, improved dev ex with GitHub Actions, and led large-scale TypeScript and UX modernization efforts - I value practices, conventions and tools that improve developer experience. I have backend experience with Node.js/Fastify/Prisma, and an active interest in UI/UX and web design work with Figma."
+}
