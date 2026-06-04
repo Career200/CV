@@ -1,19 +1,20 @@
 import { forwardRef } from 'react';
+import type { ComponentType } from 'react';
 import './ContentSection.scss';
 
 interface ContentSectionProps {
 	id: string;
 	title: string;
-	content: string;
+	body: ComponentType;
 }
 
 export const ContentSection = forwardRef<HTMLElement, ContentSectionProps>(
-	({ id, title, content }, ref) => (
+	({ id, title, body: Body }, ref) => (
 		<section id={id} ref={ref} className="content-section">
 			<div className="glass-box">
 				<h2 className="section-title">{title}</h2>
 				<div className="section-content">
-					<p>{content}</p>
+					<Body />
 				</div>
 			</div>
 		</section>

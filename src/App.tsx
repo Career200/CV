@@ -62,7 +62,7 @@ function App() {
             key={section.id}
             id={section.id}
             title={section.title}
-            content={section.content}
+            body={section.Body}
           />
         ))}
       </main>
