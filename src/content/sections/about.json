@@ -1,6 +1,6 @@
 {
-	"id": "about",
-	"order": 2,
-	"title": "...at work",
-	"content": "An engineer who takes ownership of critical shared systems - the kind that the teams can rely on. I balance shipping features with the less visible work: removing technical debt, fixing security issues, establishing tools that help everyone move faster. I care about the long game and blossom in collaborative environments where knowledge sharing and mentorship are valued."
+  "id": "about",
+  "order": 2,
+  "title": "...at work",
+  "content": "An engineer who takes ownership of critical shared systems - the kind that the teams can rely on. I balance shipping features with the less visible work: removing technical debt, fixing security issues, establishing tools that help everyone move faster. I care about the long game and blossom in collaborative environments where knowledge sharing and mentorship are valued."
 }

@@ -5,7 +5,7 @@ export interface Section {
   content: string;
 }
 
-// Every file under sections/ is an entry.
+// Every file under sections/ is an entry. Zod validates at build time.
 const modules = import.meta.glob<{ default: Section }>("./sections/*.json", {
   eager: true
 });
