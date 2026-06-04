@@ -2,28 +2,28 @@
   "sections": [
     {
       "id": "intro",
-      "title": "Hello, world!",
-      "content": "My name is Dmitry Zhukov. I am an optimistic, open and driven person with many passions - music, philosophy, sci-fi and role-playing games, but most importantly - software development. I am a design-minded frontend engineer with moderate back-end skills specializing in component architecture, UI systems and developer experience. Over the last three years, I've shipped features and infrastructure improvements across enterprise applications, a scientific visualization platform and design systems."
+      "title": "Here's me...",
+      "content": "My name is Dmitry Zhukov. I am an optimistic, open and driven person with many passions - music, philosophy, sci-fi and role-playing games, but most importantly - software development. I am a design-minded frontend engineer with back-end skills specializing in component architecture, UI systems and developer experience. Over the last three years, I've shipped features and infrastructure improvements across enterprise applications, a scientific visualization platform and design systems."
     },
     {
       "id": "about",
-      "title": "Who am I?",
+      "title": "...at work",
       "content": "An engineer who takes ownership of critical shared systems - the kind that the teams can rely on. I balance shipping features with the less visible work: removing technical debt, fixing security issues, establishing tools that help everyone move faster. I care about the long game and blossom in collaborative environments where knowledge sharing and mentorship are valued."
     },
     {
       "id": "skills",
-      "title": "What I do?",
+      "title": "...with my skills",
       "content": "I work primarily in React, TypeScript, and modern styling (CSS-in-JS, CSS/SASS or Tailwind). Comfortable with state management (MobX), testing frameworks (Jest, Puppeteer), and build tooling. I've built component libraries, implemented visual regression testing, improved dev ex with GitHub Actions, and led large-scale TypeScript and UX modernization efforts - I value practices, conventions and tools that improve developer experience. I have backend experience with Node.js/Fastify/Prisma, and an active interest in UI/UX and web design work with Figma."
     },
     {
       "id": "learning",
-      "title": "How I learned?",
-      "content": "Mostly by doing: I've led large-scale migrations, built testing infrastructure from scratch, coordinated cross-team integrations. I tackle complex refactoring problems where maintaining backward compatibility is crucial, then document patterns so others can move faster. I also make pet projects to explore new tech and enrich my lifestyle or hobbies. I read extensively: docs, blogs, issues, source code. And yes, I follow my dev YouTube."
+      "title": "...always learning",
+      "content": "Accidentally, though - I just want to build cool stuff and it so happens that I learn along the way. I default to Astro for pet projects — content-driven, but islands let you smuggle a whole SPA inside: a TTRPG site for my players, in-world lore wrapped around a live character sheet. Deep in Mechwarrior obsession at some point, I pulled mech stats from MW5 source code and built a site around it. I've animated my own feelings to explain them in therapy. Somehow the tricks I learn in my personal projects keep resurfacing in my day job."
     },
     {
       "id": "mentoring",
-      "title": "I share?",
-      "content": "Yeah I do. I've led engineering teams as mentor at a technical academy, guiding new developers through building production-grade full-stack applications with TypeScript, React, Node.js, and PostgreSQL. Two-month agile cycles teaching architecture, best practices, team dynamics, the whole development process. Best outcome? Mentees landing professional engineering roles. And a bit of side work - teaching young kids the basics of programming through game development with Scratch, their absolute delight when they see their code come to life is priceless."
+      "title": "...and sharing",
+      "content": "Turns out it's fun! I've led engineering teams as mentor at a technical academy, guiding new developers through building production-grade full-stack applications with TypeScript, React, Node.js, and PostgreSQL. Two-month agile cycles teaching architecture, best practices, team dynamics, the whole development process. Best outcome? Mentees landing professional engineering roles. And a bit of side work - teaching young kids the basics of programming through game development with Scratch, their absolute delight when they see their code come to life is priceless."
     },
     {
       "id": "contact",
