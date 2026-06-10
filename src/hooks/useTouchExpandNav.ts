@@ -1,8 +1,7 @@
 import { useEffect, RefObject } from "react";
 
-const TOUCH_ZONE = 60;
 const NAV_EXPANDED_WIDTH = 200;
-const NAV_SWIPE_THRESHOLD = 240;
+const SWIPE_COLLAPSE_DISTANCE = 50;
 const AUTO_COLLAPSE_DELAY = 600;
 
 export const useTouchExpandNav = (navRef: RefObject<HTMLElement>) => {
@@ -37,10 +36,7 @@ export const useTouchExpandNav = (navRef: RefObject<HTMLElement>) => {
 
       touchStartX = e.touches[0].clientX;
       clearExpandTimeout();
-
-      if (touchStartX >= window.innerWidth - TOUCH_ZONE) {
-        expandNav();
-      }
+      expandNav();
     };
 
     const handleTouchEnd = () => {
@@ -54,9 +50,7 @@ export const useTouchExpandNav = (navRef: RefObject<HTMLElement>) => {
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      const touch = e.touches[0];
-
-      if (touch.clientX < window.innerWidth - NAV_SWIPE_THRESHOLD) {
+      if (e.touches[0].clientX - touchStartX > SWIPE_COLLAPSE_DISTANCE) {
         clearExpandTimeout();
         collapseNav();
       }
