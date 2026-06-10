@@ -3,7 +3,7 @@ import { useEffect, RefObject } from "react";
 const TOUCH_ZONE = 60;
 const NAV_EXPANDED_WIDTH = 200;
 const NAV_SWIPE_THRESHOLD = 240;
-const AUTO_COLLAPSE_DELAY = 1200;
+const AUTO_COLLAPSE_DELAY = 600;
 
 export const useTouchExpandNav = (navRef: RefObject<HTMLElement>) => {
   useEffect(() => {
