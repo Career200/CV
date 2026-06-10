@@ -1,0 +1,116 @@
+.project-popover {
+  position: relative;
+  display: inline-block;
+
+  > a.popover-trigger {
+    color: var(--accent-gold);
+    text-decoration: underline dotted;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+
+    &::after {
+      content: none;
+    }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        text-decoration-style: solid;
+      }
+    }
+  }
+
+  .popover-bubble {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(calc(-50% + var(--shift, 0px)));
+    // move cursor without losing hover
+    padding-bottom: 10px;
+    width: max-content;
+    max-width: min(360px, calc(100vw - 24px));
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 200ms ease,
+      visibility 200ms;
+  }
+
+  .popover-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.1rem 1.25rem;
+    background: rgba(255, 255, 255);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    transform: translateY(4px);
+    transition: transform 200ms ease;
+
+    :root.dark-mode & {
+      background: rgba(26, 26, 26, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .popover-blurb {
+    color: var(--text-primary);
+  }
+
+  .popover-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .stack-chip {
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid var(--accent-color);
+    background: rgba(100, 108, 255, 0.25);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    color: var(--text-primary);
+  }
+
+  .popover-link {
+    align-self: flex-start;
+    font-size: 0.875rem;
+    color: var(--accent-color);
+  }
+
+  &.open .popover-bubble {
+    opacity: 1;
+    visibility: visible;
+
+    .popover-card {
+      transform: translateY(0);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover .popover-bubble,
+    &:focus-within .popover-bubble {
+      opacity: 1;
+      visibility: visible;
+
+      .popover-card {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .popover-bubble,
+    .popover-card {
+      transition: none;
+    }
+  }
+}

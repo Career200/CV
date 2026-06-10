@@ -20,6 +20,7 @@
   --text-secondary: rgba(0, 0, 0, 0.6);
   --border-color: #e0e0e0;
   --accent-color: #646cff;
+  --accent-gold: #6b6200;
   --button-bg: #f0f0f0;
   --button-hover-border: #646cff;
   --banner-bg: rgba(255, 255, 255, 0.9);
@@ -59,6 +60,7 @@
   --text-secondary: rgba(255, 255, 255, 0.6);
   --border-color: #404040;
   --accent-color: #646cff;
+  --accent-gold: #dcdc2d;
   --button-bg: #1a1a1a;
   --button-hover-border: #646cff;
   --banner-bg: rgba(0, 0, 0, 0.9);
