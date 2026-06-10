@@ -20,14 +20,6 @@ a {
   position: relative;
   text-decoration: none;
   color: var(--text-primary);
-
-  &::after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: var(--accent-color);
-  }
 }
 
 .top-banner {

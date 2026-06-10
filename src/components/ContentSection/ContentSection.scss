@@ -51,17 +51,20 @@
     a {
       color: var(--accent-color);
 
-      &::after {
-        left: 0;
-        height: 2px;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 200ms ease;
-      }
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-decoration-thickness: 2px;
+      text-underline-position: under;
+      text-underline-offset: 0.35em;
+      transition:
+        text-decoration-color 200ms ease,
+        text-underline-offset 200ms ease,
+        color 300ms ease;
 
-      &:hover::after,
-      &:focus-visible::after {
-        transform: scaleX(1);
+      &:hover,
+      &:focus-visible {
+        text-decoration-color: currentColor;
+        text-underline-offset: 0.18em;
       }
     }
   }
